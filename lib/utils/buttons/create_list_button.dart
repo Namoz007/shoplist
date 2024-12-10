@@ -34,22 +34,13 @@ class _CreateListButtonState extends State<CreateListButton> {
           ),
         ),
         alignment: Alignment.center,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              widget.buttonText,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            ),
-            const Icon(
-              Icons.add,
-              color: Colors.white,
-              size: 40,
-            )
-          ],
+        child: Text(
+          widget.buttonText,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+            fontSize: 18
+          ),
         ),
       ),
     );
