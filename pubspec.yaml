@@ -23,10 +23,17 @@ dependencies:
   build_runner: ^2.4.13
   path_provider: ^2.1.5
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.14.2
+
+flutter_icons:
+  android: false
+  ios: true
+  image_path: "assets/icon/app_icon.png"
 
 flutter:
   uses-material-design: true
@@ -36,3 +43,4 @@ flutter:
     - assets/products/electronics/
     - assets/products/clothes/
     - assets/products/home_appliances/
+    - assets/icon/

@@ -24,8 +24,7 @@ class _CreateListButtonState extends State<CreateListButton> {
       },
       child: Container(
         height: 70,
-        width: 250,
-
+        margin: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(35),
           gradient: LinearGradient(

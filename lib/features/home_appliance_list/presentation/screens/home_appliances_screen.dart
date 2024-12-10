@@ -9,6 +9,13 @@ class HomeAppliancesScreen extends StatefulWidget {
 }
 
 class _HomeAppliancesScreenState extends State<HomeAppliancesScreen> {
+
+  @override
+  void initState() {
+    super.initState();
+    context.read<ListsManagementBloc>().add(GetAllListsManagementEventFromStorage(category: listsCategory.appliance));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,19 +48,19 @@ class _HomeAppliancesScreenState extends State<HomeAppliancesScreen> {
           }
 
           if (state is LoadedListManagementState) {
-            if(state.lists.isNotEmpty || state.lists.where((value) => value.category == listsCategory.electronic).toList().isNotEmpty){
+            if(state.lists.where((value) => value.category == listsCategory.appliance).toList().isNotEmpty){
               return ShowListsForCategory(
                 category: listsCategory.appliance,
                 lists: state.lists.where((value) => value.category == listsCategory.appliance).toList(),
               );
             }else{
-              return const Center(child: Text("Electronic lists not found!",style: TextStyle(fontSize: 18,color: Colors.deepPurple),),);
+              return const Center(child: Text("Home Appliances lists not found!",style: TextStyle(fontSize: 18,color: Colors.deepPurple),),);
             }
           }
           return Container();
         },
       ),
-      floatingActionButton: CreateListButton(
+      bottomNavigationBar: CreateListButton(
         buttonText: "New home appliances list",
         containerColors: [
           Colors.deepPurple.shade300,

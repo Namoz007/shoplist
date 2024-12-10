@@ -59,7 +59,7 @@ class _ClothesListScreenState extends State<ClothesListScreen> {
           return Container();
         },
       ),
-      floatingActionButton: CreateListButton(
+      bottomNavigationBar: CreateListButton(
         buttonText: "New clothes list",
         containerColors: [
           Colors.deepPurple.shade300,

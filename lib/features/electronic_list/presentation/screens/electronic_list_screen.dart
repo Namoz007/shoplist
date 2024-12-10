@@ -61,7 +61,7 @@ class _ElectronicListScreenState extends State<ElectronicListScreen> {
           return Container();
         },
       ),
-      floatingActionButton: CreateListButton(
+      bottomNavigationBar: CreateListButton(
         buttonText: "New electronic list",
         containerColors: [
           Colors.deepPurple.shade300,

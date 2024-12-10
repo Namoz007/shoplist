@@ -62,7 +62,7 @@ class _FoodListScreenState extends State<FoodListScreen> {
           return Container();
         },
       ),
-      floatingActionButton: CreateListButton(
+      bottomNavigationBar: CreateListButton(
         buttonText: "New food list",
         containerColors: [
           Colors.deepPurple.shade300,
